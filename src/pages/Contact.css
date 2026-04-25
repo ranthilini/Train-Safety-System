@@ -1,0 +1,114 @@
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+  margin-top: 3rem;
+  align-items: center; /* add this */
+}
+
+
+
+
+.contact-info-side {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  /* remove this */
+  margin-left: 380px;
+
+  /* center items */
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  width: 500px;
+}
+
+.contact-icon {
+  color: var(--accent-primary);
+  width: 24px;
+  height: 24px;
+}
+
+.contact-text h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.contact-text p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.contact-form {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group input, .form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+  border-color: var(--accent-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.submit-btn {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: var(--transition-normal);
+}
+
+.submit-btn:hover {
+  background: var(--accent-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px var(--accent-glow);
+}
+
+@media (max-width: 968px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    justify-items: center; /* center horizontally */
+  }
+
+  .contact-container > * {
+    width: 100%;
+    max-width: 500px; /* controls width so it appears centered */
+  }
+}

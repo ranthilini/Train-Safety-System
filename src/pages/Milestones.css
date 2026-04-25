@@ -1,0 +1,100 @@
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 4rem auto 0;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--glass-border);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -2.75rem;
+  top: 0;
+  background: var(--bg-primary);
+  color: var(--text-muted);
+  transition: var(--transition-normal);
+}
+
+/* STATUS COLORS */
+.timeline-item.completed .timeline-marker {
+  color: var(--success);
+}
+
+.timeline-item.ongoing .timeline-marker {
+  color: var(--warning);
+}
+
+.timeline-item.not-yet-completed .timeline-marker {
+  color: #ef4444;
+}
+
+.timeline-content {
+  padding: 2rem;
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.milestone-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+.milestone-marks {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* STATUS BADGES */
+.status-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.status-badge.completed {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--success);
+}
+
+.status-badge.ongoing {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+}
+
+.status-badge.not-yet-completed {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+}
