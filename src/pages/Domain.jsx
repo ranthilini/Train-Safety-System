@@ -29,7 +29,7 @@ const Domain = () => {
                 <li><strong>Crowd Detection:</strong> Previous methods relied on simple pixel change analysis, which is prone to errors in changing lighting conditions.</li>
                 <li> <strong>Platform compartment Alignment: </strong>uses crowd analysis to optimize train stopping positions and reduce overcrowding.</li>
                 <li><strong>Obstacle Detection:</strong> Most current systems are radar-based but lack the visual confirmation provided by modern computer vision.</li>
-                <li><strong>Driver Fatigue:</strong> Wearable sensors have been tested, but non-intrusive camera-based monitoring is the emerging standard.</li>
+                <li><strong>Driver Fatigue:</strong> Existing train driver fatigue and drowsiness detection systems mainly rely on single-method monitoring, limiting detection accuracy and reliability.</li>
               </ul>
             </div>
           </section>
